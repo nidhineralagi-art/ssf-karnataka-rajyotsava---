@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#b71c1c">
+<title>SSF Karnataka Rajyotsava | Namma Karnataka</title>
+<style>
+:root{--red:#c62828;--deep:#8e1717;--yellow:#ffd600;--cream:#fffaf0;--ink:#2c2521;--muted:#6e625b;--card:#fff;--line:#f0dfd2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+header{position:sticky;top:0;z-index:10;background:rgba(255,250,240,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-wrap{max-width:1120px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--deep);font-weight:900;font-size:1.05rem;letter-spacing:.2px}
+.flag{width:34px;height:34px;border-radius:50%;overflow:hidden;border:2px solid white;box-shadow:0 0 0 1px #e4c8b4;flex-shrink:0}.flag span{display:block;height:50%;background:var(--yellow)}.flag span+span{background:var(--red)}
+nav{display:flex;align-items:center;gap:5px;flex-wrap:wrap}nav a{color:#4d3b34;text-decoration:none;font-size:.9rem;font-weight:700;padding:9px 12px;border-radius:22px}nav a:hover,nav a.active{background:#ffedb0;color:var(--deep)}
+.menu{display:none;border:0;background:var(--red);color:white;border-radius:10px;padding:9px 12px;font-size:1.1rem}
+.hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#8e1717 0%,#c62828 55%,#e34b32 100%);color:white}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(255,214,0,.3);border-radius:50%;width:420px;height:420px;right:-110px;top:-160px}.hero:after{width:260px;height:260px;right:15px;top:-85px}
+.hero-inner{max-width:1120px;margin:auto;padding:78px 22px 76px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:36px;position:relative;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,214,0,.16);border:1px solid rgba(255,214,0,.5);color:#ffe66d;padding:7px 13px;border-radius:30px;font-weight:800;font-size:.82rem;letter-spacing:.7px;text-transform:uppercase}
+h1{font-size:clamp(2.6rem,6vw,4.8rem);line-height:1.02;margin:20px 0 18px;letter-spacing:-2px}h1 span{color:var(--yellow)}.hero p{font-size:1.12rem;max-width:610px;color:#ffeded;margin:0 0 26px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-block;text-decoration:none;padding:12px 18px;border-radius:28px;font-weight:800;border:2px solid transparent;transition:.2s}.btn.primary{background:var(--yellow);color:#5b1914}.btn.secondary{border-color:rgba(255,255,255,.7);color:white}.btn:hover{transform:translateY(-2px)}
+.hero-art{min-height:290px;display:grid;place-items:center}.emblem{width:min(300px,80vw);aspect-ratio:1;border-radius:50%;background:linear-gradient(160deg,#ffe98a,#ffc928);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--deep);border:10px solid rgba(255,255,255,.25);box-shadow:0 22px 55px #5b0d0d66;text-align:center;transform:rotate(3deg)}.emblem .kannada{font-size:2rem;font-weight:900}.emblem .big{font-size:5rem;line-height:1.1}.emblem small{font-weight:900;letter-spacing:2px}
+.strip{background:var(--yellow);color:#5a2019;text-align:center;padding:12px 18px;font-weight:900;letter-spacing:.3px}
+main{max-width:1120px;margin:auto;padding:0 22px}.section{padding:68px 0;scroll-margin-top:86px}.section-head{text-align:center;max-width:720px;margin:0 auto 32px}.kicker{color:var(--red);text-transform:uppercase;letter-spacing:2px;font-size:.76rem;font-weight:900}.section h2{font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.15;margin:8px 0 12px;color:#3b211b;letter-spacing:-.8px}.section-head p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 8px 24px #572b1710}.card .icon{width:48px;height:48px;display:grid;place-items:center;background:#fff0b7;border-radius:14px;font-size:1.6rem;margin-bottom:14px}.card h3{margin:0 0 8px;font-size:1.15rem;color:var(--deep)}.card p{margin:0;color:var(--muted);font-size:.96rem}
+.history{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:stretch}.history-banner{background:linear-gradient(145deg,#ffe06b,#ffbd2e);border-radius:24px;padding:30px;display:flex;flex-direction:column;justify-content:center;color:#5d2119;min-height:290px}.history-banner strong{font-size:4rem;line-height:1}.history-banner span{font-weight:800;margin-top:12px}.history-copy{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px}.history-copy p{color:var(--muted);margin-top:0}.fact-list{display:grid;gap:12px;margin-top:20px}.fact{display:flex;gap:12px;align-items:flex-start}.fact b{color:var(--red);min-width:85px}
+.pride{background:#fff5d7;border-radius:26px;padding:34px}.pride-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}.pride h2{margin-top:0}.pride p{color:var(--muted)}.pride ul{padding-left:20px}.pride li{margin:8px 0}.quote{font-size:1.35rem;font-weight:900;color:var(--deep);border-left:5px solid var(--red);padding:8px 0 8px 18px;margin:20px 0 0}
+.celebrate{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.celebrate .card{display:flex;gap:16px;align-items:flex-start}.celebrate .icon{flex-shrink:0}
+footer{background:#321b18;color:#fff1dd;padding:36px 22px;text-align:center}footer strong{font-size:1.2rem;color:var(--yellow)}footer p{margin:8px auto;color:#e6cfc5;max-width:620px;font-size:.92rem}.top{display:inline-block;margin-top:12px;color:var(--yellow);font-weight:800;text-decoration:none}
+@media(max-width:800px){.hero-inner{grid-template-columns:1fr;padding-top:58px}.hero-art{min-height:230px}.emblem{width:230px}.emblem .big{font-size:4rem}.cards{grid-template-columns:1fr 1fr}.history{grid-template-columns:1fr}.pride-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.nav-wrap{flex-wrap:wrap}.menu{display:block}nav{display:none;width:100%;flex-direction:column;align-items:stretch;padding:8px 0}nav.open{display:flex}nav a{padding:11px 14px}.hero-inner{padding:48px 20px}.hero p{font-size:1rem}.cards,.celebrate{grid-template-columns:1fr}.section{padding:48px 0}.pride{padding:24px}.history-copy{padding:23px}h1{letter-spacing:-1px}}
+
+/* Contribution tracker styled to match the supplied reference image */
+.contribution-tracker{max-width:1120px;margin:0 auto}
+.collection-total{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;background:linear-gradient(105deg,#d9b431 0%,#f7d979 100%);color:#5b1b1b;border-radius:24px;padding:22px 24px;margin:0 0 30px;font-size:clamp(1.1rem,2.4vw,1.65rem);font-weight:900;box-shadow:0 12px 28px rgba(112,67,15,.12)}
+.collection-total strong{font-weight:900;font-variant-numeric:tabular-nums}
+.contribution-table-wrap{overflow-x:auto;border-radius:22px;background:#fffdf5;box-shadow:0 12px 30px rgba(77,35,22,.10)}
+.contribution-table{width:100%;border-collapse:collapse;min-width:560px;font-size:1.08rem;line-height:1.5}
+.contribution-table thead{background:#5b1b1b;color:#fff}
+.contribution-table th{padding:18px 22px;text-align:left;font-size:.95rem;font-weight:900;letter-spacing:.2px}
+.contribution-table th:last-child,.contribution-table td:last-child{text-align:right}
+.contribution-table td{padding:18px 22px;border-bottom:1px solid #f0e3c9;background:#fffdf5}
+.contribution-table tbody tr:nth-child(even) td{background:#fff9ec}
+.contribution-table tbody tr:last-child td{border-bottom:0}
+.contribution-table td:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+.empty-contributions{text-align:center!important;color:#75665d;padding:34px 18px!important}
+.tracker-note{text-align:center;color:#75665d;font-size:.88rem;margin:12px 0 0}
+@media(max-width:640px){.collection-total{border-radius:17px;padding:18px 12px;margin-bottom:20px}.contribution-table th,.contribution-table td{padding:14px 15px;font-size:.94rem}.contribution-table th{font-size:.8rem}.contribution-contact{margin-top:22px!important}}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="nav-wrap">
+    <a class="brand" href="#home"><span class="flag" aria-hidden="true"><span></span><span></span></span><span>ನಮ್ಮ ಕರ್ನಾಟಕ <small style="display:block;font-size:.68rem;color:#7b6258;font-weight:700">NAMMA KARNATAKA</small></span></a>
+    <button class="menu" aria-label="Open navigation" aria-expanded="false" onclick="toggleMenu()">☰</button>
+    <nav id="nav">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About Rajyotsava</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#contributions">Contributions</a>
+      <a href="#cultural-events">Cultural Events</a>
+    </nav>
+  </div>
+</header>
+<div class="music-control" style="position:fixed;right:16px;bottom:16px;z-index:20;background:#fffaf0;border:1px solid #f0dfd2;border-radius:16px;padding:10px 12px;box-shadow:0 8px 24px #572b1720;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 32px)">
+  <span aria-hidden="true">🎵</span><span style="font-size:.84rem;font-weight:800;color:#8e1717">Hacchevu Kannadada Deepa</span>
+  <button id="music-toggle" type="button" aria-pressed="false" style="border:0;border-radius:22px;padding:9px 13px;background:#c62828;color:white;font-weight:800;cursor:pointer;white-space:nowrap">▶ Play</button>
+</div>
+<audio id="background-music" preload="none" loop>
+  <source src="hacchevu-kannadada-deepa.mp3" type="audio/mpeg">
+  Your browser does not support audio playback.
+</audio>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">ಕನ್ನಡವೇ ನಮ್ಮ ಹೆಮ್ಮೆ · Kannada is our pride</div>
+      <h1>SSF Karnataka Rajyotsava<br><span>Namma Karnataka!</span></h1>
+      <p>Celebrating SSF Karnataka Rajyotsava — a special day to honour our language, heritage, culture and beautiful state. Let’s celebrate together! <b>ಜೈ ಕರ್ನಾಟಕ!</b></p>
+      <div class="actions"><a class="btn primary" href="#schedule">View the Schedule ↓</a><a class="btn secondary" href="#cultural-events">Register for Events</a></div>
+    </div>
+    <div class="hero-art" aria-label="Karnataka yellow and red flag inspired emblem">
+      <div class="emblem"><div class="kannada">ಜೈ ಕರ್ನಾಟಕ</div><div class="big">ಕನ್ನಡ</div><small>NAMMA NAADU · NAMMA HEMME</small></div>
+    </div>
+  </div>
+</section>
+<div class="strip">🟡 ಕೆಂಪು–ಹಳದಿ ನಮ್ಮ ಗುರುತು &nbsp; • &nbsp; Red and yellow, a symbol of Karnataka pride 🔴</div>
+<main>
+<section class="section" id="about">
+  <div class="section-head"><div class="kicker">Namma Hemme · ನಮ್ಮ ಹೆಮ್ಮೆ</div><h2>About Karnataka Rajyotsava</h2><p>Karnataka Rajyotsava is celebrated every year on 1 November. It marks the formation of Karnataka and celebrates Kannada language, culture and identity.</p></div>
+  <div class="cards">
+    <article class="card"><div class="icon">📅</div><h3>A Day to Remember</h3><p>On 1 November 1956, Kannada-speaking regions were brought together to form Mysore State. It was renamed Karnataka in 1973.</p></article>
+    <article class="card"><div class="icon">❤️</div><h3>Our Language, Our Pride</h3><p>Kannada has a rich literary history. Rajyotsava is a chance to celebrate our language and pass it on to future generations.</p></article>
+    <article class="card"><div class="icon">🤝</div><h3>Unity in Diversity</h3><p>People come together to celebrate Karnataka’s traditions, achievements, art, music and the many communities that make our state special.</p></article>
+  </div>
+</section>
+
+<section class="section" id="schedule">
+  <div class="section-head"><div class="kicker">Save the dates</div><h2>Event Schedule</h2><p>Join us for two days of fun, creativity and celebration!</p></div>
+  <div class="pride" style="max-width:820px;margin:auto">
+    <div style="text-align:center;background:#c62828;color:#fff;border-radius:18px;padding:22px;margin-bottom:20px">
+      <div style="font-size:.85rem;font-weight:800;letter-spacing:2px">SSF KARNATAKA RAJYOTSAVA CELEBRATION</div>
+      <div style="font-size:clamp(1.5rem,4vw,2.3rem);font-weight:900;margin-top:5px">21st – 22nd November 2026</div>
+    </div>
+    <div style="display:grid;gap:20px">
+      <div class="history-copy">
+        <h3 style="margin-top:0;color:#8e1717">📅 Day 1: Saturday, 21st November</h3>
+        <div class="fact-list" style="margin-top:12px">
+          <div class="fact"><b style="min-width:95px">3:00 PM</b><span>🎥 GandhadaGudi (Special Screening/Theme)</span></div>
+          <div class="fact"><b style="min-width:95px">3:30 PM</b><span>🎤 Speech Competition</span></div>
+          <div class="fact"><b style="min-width:95px">4:00 PM</b><span>🎨 Colouring &amp; Drawing Competition</span></div>
+          <div class="fact"><b style="min-width:95px">6:00 PM</b><span>👗 Fancy Dress Competition</span></div>
+        </div>
+      </div>
+      <div class="history-copy">
+        <h3 style="margin-top:0;color:#8e1717">📅 Day 2: Sunday, 22nd November</h3>
+        <div class="fact-list" style="margin-top:12px">
+          <div class="fact"><b style="min-width:95px">8:30 AM</b><span>🇮🇳 Flag Hoisting &amp; Chief Guest Speech</span></div>
+          <div class="fact"><b style="min-width:95px">9:00 AM</b><span>🎭 Gombe Procession</span></div>
+          <div class="fact"><b style="min-width:95px">9:30 AM</b><span>🎭 Cultural Events</span></div>
+          <div class="fact"><b style="min-width:95px">10:30 AM</b><span>🏆 Prize Distribution</span></div>
+          <div class="fact"><b style="min-width:95px">11:00 AM</b><span>🍿 Snacks Distribution</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="contributions">
+  <div class="section-head"><div class="kicker">Every contribution counts</div><h2>Contribution Tracker</h2><p>Thank you for supporting SSF Karnataka Rajyotsava 2026.</p></div>
+  <div class="contribution-tracker">
+    <div class="collection-total" aria-live="polite"><span aria-hidden="true">💰</span> Total Collection: <strong id="contribution-total">₹0.00</strong></div>
+    <div class="contribution-table-wrap">
+      <table class="contribution-table">
+        <thead><tr><th scope="col">FLAT NO</th><th scope="col">RESIDENT NAME</th><th scope="col">CONTRIBUTION (₹)</th></tr></thead>
+        <tbody id="contribution-rows"><tr><td colspan="3" class="empty-contributions">No contributions recorded yet.</td></tr></tbody>
+      </table>
+    </div>
+    <p class="tracker-note" id="tracker-status">The contribution list will appear here as verified entries are added to the spreadsheet.</p>
+  </div>
+  <div class="history-copy contribution-contact" style="max-width:820px;margin:26px auto 0">
+    <p style="font-size:1.05rem;margin-top:0">Contribute towards SSF Karnataka Rajyotsava 2026 and be part of the celebration.</p>
+    <div class="fact-list" style="margin-top:0">
+      <div class="fact"><b style="min-width:0">📞 Suresh Matam:</b><a href="tel:8546969220" style="color:#8e1717;font-weight:800;text-decoration:none">85469 69220</a></div>
+      <div class="fact"><b style="min-width:0">📞 Nagendra:</b><a href="tel:9742632481" style="color:#8e1717;font-weight:800;text-decoration:none">97426 32481</a></div>
+      <div class="fact"><b style="min-width:0">📞 Arun Hatti:</b><a href="tel:9686911222" style="color:#8e1717;font-weight:800;text-decoration:none">96869 11222</a></div>
+    </div>
+    <p style="margin-top:20px">Please send your contribution through UPI to any of the contact numbers below. Please double-check the recipient's name in your UPI app before confirming payment.</p>
+  </div>
+</section>
+
+<section class="section" id="cultural-events">
+  <div class="section-head"><div class="kicker">Show your talent</div><h2>Cultural Events</h2><p>Be part of the celebration and share your talent with everyone!</p></div>
+  <div class="cards" style="max-width:760px;margin:0 auto 28px">
+    <article class="card"><div class="icon">🎤</div><h3>Singing</h3><p>Perform a song and fill the celebration with music.</p></article>
+    <article class="card"><div class="icon">💃</div><h3>Dancing</h3><p>Show your moves and celebrate through dance.</p></article>
+  </div>
+  <div class="history-copy" style="max-width:760px;margin:auto;text-align:center">
+    <h3 style="color:#8e1717;font-size:1.5rem;margin-top:0">Registration</h3>
+    <p>Register for singing or dancing using the form below.</p>
+    <a class="btn primary" href="https://forms.gle/qjY1QcEVc8J3h9E5A" target="_blank" rel="noopener noreferrer">Open Registration Form ↗</a>
+  </div>
+</section>
+</main>
+<footer id="footer"><strong>ಜೈ ಕರ್ನಾಟಕ! · Jai Karnataka!</strong><p>Let’s celebrate our language, culture and heritage together.</p><p>SSF Karnataka Rajyotsava 2026 · ಕನ್ನಡ ನಮ್ಮ ಹೆಮ್ಮೆ</p><a class="top" href="#home">Back to top ↑</a></footer>
+<script>
+
+// Local audio file: place hacchevu-kannadada-deepa.mp3 beside this HTML file.
+// Playback starts only when the visitor presses Play and continues in the background.
+const musicToggle = document.getElementById("music-toggle");
+const backgroundMusic = document.getElementById("background-music");
+if (musicToggle && backgroundMusic) {
+  musicToggle.addEventListener("click", async () => {
+    if (backgroundMusic.paused) {
+      try {
+        await backgroundMusic.play();
+        musicToggle.textContent = "⏸ Pause";
+        musicToggle.setAttribute("aria-pressed", "true");
+      } catch (error) {
+        musicToggle.textContent = "▶ Try again";
+        alert("The audio file could not be played. Please make sure hacchevu-kannadada-deepa.mp3 is in the same folder as this website.");
+      }
+    } else {
+      backgroundMusic.pause();
+      musicToggle.textContent = "▶ Play";
+      musicToggle.setAttribute("aria-pressed", "false");
+    }
+  });
+}
+
+// Contribution tracker: paste the published Google Sheets CSV URL below.
+// Expected columns: Flat Number, Contributor Name, Amount (₹), Recipient.
+const CONTRIBUTIONS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSVCX2_IlvOJfCyR026Ov3-7PyQpZ2RS__0d1qtWdMSxC-tdiDCJ6XhCairMPhRT-A5X3B-ohstjiNc/pub?output=csv";
+const contributionRows = document.getElementById("contribution-rows");
+const contributionTotal = document.getElementById("contribution-total");
+const trackerStatus = document.getElementById("tracker-status");
+const moneyFormat = new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", minimumFractionDigits: 2, maximumFractionDigits: 2 });
+function parseCSV(text) {
+  const rows = []; let row = []; let cell = ""; let quoted = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (ch === '"' && quoted && text[i + 1] === '"') { cell += '"'; i++; }
+    else if (ch === '"') quoted = !quoted;
+    else if (ch === ',' && !quoted) { row.push(cell); cell = ""; }
+    else if ((ch === '\n' || ch === '\r') && !quoted) {
+      if (ch === '\r' && text[i + 1] === '\n') i++;
+      row.push(cell); if (row.some(value => value.trim() !== "")) rows.push(row);
+      row = []; cell = "";
+    } else cell += ch;
+  }
+  row.push(cell); if (row.some(value => value.trim() !== "")) rows.push(row);
+  return rows;
+}
+function normalizeHeader(value) { return String(value || "").replace(/^\uFEFF/, "").toLowerCase().replace(/[^a-z0-9]/g, ""); }
+let contributionRefreshInProgress = false;
+let lastContributionData = "";
+async function loadContributions() {
+  if (contributionRefreshInProgress) return;
+  contributionRefreshInProgress = true;
+  if (!CONTRIBUTIONS_CSV_URL || CONTRIBUTIONS_CSV_URL.includes("PASTE_PUBLISHED")) {
+    trackerStatus.textContent = "Spreadsheet connection not added yet. Your total is currently ₹0.00.";
+    return;
+  }
+  try {
+    // Build a fresh URL for every poll. Avoid custom request headers because
+    // they can trigger cross-origin preflight requests in some browsers.
+    const freshUrl = new URL(CONTRIBUTIONS_CSV_URL);
+    const refreshToken = Date.now().toString();
+    freshUrl.searchParams.set("_refresh", refreshToken);
+    freshUrl.searchParams.set("cachebust", refreshToken);
+    const response = await fetch(freshUrl.toString(), {
+      method: "GET",
+      cache: "reload",
+      redirect: "follow"
+    });
+    if (!response.ok) throw new Error("Could not load the published spreadsheet.");
+    const csvText = await response.text();
+    if (!csvText || !csvText.trim()) throw new Error("The published spreadsheet is empty or unavailable.");
+    const rawRows = parseCSV(csvText);
+    if (!rawRows.length) throw new Error("The published spreadsheet is empty or unavailable.");
+    const headers = rawRows[0].map(normalizeHeader);
+    const findColumn = (...names) => headers.findIndex(header => names.includes(header));
+    const flatIndex = findColumn("flatnumber", "flatno", "flat", "flatnum");
+    const nameIndex = findColumn("contributorname", "residentname", "name", "contributor", "resident");
+    const amountIndex = findColumn("amount", "amountinr", "contribution", "contributioninr", "contribution₹");
+    if (flatIndex < 0 || nameIndex < 0 || amountIndex < 0) throw new Error("Please check the sheet headings: Flat Number, Contributor Name, Amount (₹), Recipient.");
+    const entries = rawRows.slice(1).map(row => {
+      const rawAmount = String(row[amountIndex] || "").replace(/[₹,\s]/g, "");
+      return { flat: (row[flatIndex] || "").trim(), name: (row[nameIndex] || "").trim(), amount: Number(rawAmount) };
+    }).filter(entry => entry.flat && entry.name && Number.isFinite(entry.amount) && entry.amount > 0);
+    const total = entries.reduce((sum, entry) => sum + entry.amount, 0);
+    contributionTotal.textContent = moneyFormat.format(total);
+    contributionRows.replaceChildren();
+    if (!entries.length) {
+      const tr = document.createElement("tr"); const td = document.createElement("td");
+      td.colSpan = 3; td.className = "empty-contributions"; td.textContent = "No contributions recorded yet.";
+      tr.appendChild(td); contributionRows.appendChild(tr);
+    } else {
+      for (const entry of entries) {
+        const tr = document.createElement("tr");
+        for (const value of [entry.flat, entry.name, moneyFormat.format(entry.amount)]) {
+          const td = document.createElement("td"); td.textContent = value; tr.appendChild(td);
+        }
+        contributionRows.appendChild(tr);
+      }
+    }
+    lastContributionData = csvText;
+    trackerStatus.textContent = "Last Updated: " + new Date().toLocaleString("en-IN", { day: "numeric", month: "short", hour: "numeric", minute: "2-digit", hour12: true }).replace(/\b(am|pm)\b/i, match => match.toLowerCase()) + " · Pulled live from Google Sheets, auto-refreshes every 5 minutes.";
+  } catch (error) {
+    trackerStatus.textContent = "Could not refresh the spreadsheet right now. Check your internet connection; the page will try again automatically.";
+  } finally {
+    contributionRefreshInProgress = false;
+  }
+}
+loadContributions();
+if (CONTRIBUTIONS_CSV_URL && !CONTRIBUTIONS_CSV_URL.includes("PASTE_PUBLISHED")) {
+  // Poll while the page is open, and refresh immediately when visitors return to the tab.
+  setInterval(loadContributions, 300000);
+  window.addEventListener("focus", loadContributions);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) loadContributions(); });
+  window.addEventListener("pageshow", loadContributions);
+}
+
+function toggleMenu(){const nav=document.getElementById('nav');const btn=document.querySelector('.menu');nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))}
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('nav a').forEach(x=>x.classList.remove('active'));a.classList.add('active');document.getElementById('nav').classList.remove('open');document.querySelector('.menu').setAttribute('aria-expanded','false')}));
+</script>
+</body>
+</html>
