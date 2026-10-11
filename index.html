@@ -227,15 +227,15 @@ async function loadContributions() {
     const freshUrl = new URL(CONTRIBUTIONS_CSV_URL);
     const refreshToken = Date.now().toString();
     freshUrl.searchParams.set("_refresh", refreshToken);
-    freshUrl.searchParams.set("cachebust", refreshToken);
     const response = await fetch(freshUrl.toString(), {
       method: "GET",
-      cache: "reload",
+      cache: "no-store",
       redirect: "follow"
     });
     if (!response.ok) throw new Error("Could not load the published spreadsheet.");
     const csvText = await response.text();
     if (!csvText || !csvText.trim()) throw new Error("The published spreadsheet is empty or unavailable.");
+    // The timestamp below means the request completed; Google may still take time to publish edits.
     const rawRows = parseCSV(csvText);
     if (!rawRows.length) throw new Error("The published spreadsheet is empty or unavailable.");
     const headers = rawRows[0].map(normalizeHeader);
@@ -264,8 +264,10 @@ async function loadContributions() {
         contributionRows.appendChild(tr);
       }
     }
+    const checkedAt = new Date().toLocaleString("en-IN", { day: "numeric", month: "short", hour: "numeric", minute: "2-digit", hour12: true }).replace(/\b(am|pm)\b/i, match => match.toLowerCase());
+    const dataChanged = csvText !== lastContributionData;
     lastContributionData = csvText;
-    trackerStatus.textContent = "Last Updated: " + new Date().toLocaleString("en-IN", { day: "numeric", month: "short", hour: "numeric", minute: "2-digit", hour12: true }).replace(/\b(am|pm)\b/i, match => match.toLowerCase()) + " · Pulled live from Google Sheets, auto-refreshes every 5 minutes.";
+    trackerStatus.textContent = "Last Checked: " + checkedAt + (dataChanged ? " · Contribution data loaded from Google Sheets." : " · No new spreadsheet data was returned.") + " Auto-checks every 5 minutes.";
   } catch (error) {
     trackerStatus.textContent = "Could not refresh the spreadsheet right now. Check your internet connection; the page will try again automatically.";
   } finally {
